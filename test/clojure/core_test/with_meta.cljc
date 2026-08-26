@@ -12,6 +12,6 @@
         ))
 
     (testing "exception cases"
-      #?(:cljs (is (= {} (with-meta {} :foo)))
-         :default (is (p/thrown? (with-meta {} :foo))))
+      #?(:cljs (is (= {} (with-meta {} :not-a-map)))
+         :default (is (p/thrown? (with-meta {} :not-a-map))))
       )))
