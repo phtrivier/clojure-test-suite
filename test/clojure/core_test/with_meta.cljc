@@ -4,7 +4,7 @@
 
 (when-var-exists with-meta
   (deftest test-with_meta
-    (testing "adding meta"
+    (testing "adding a map as metadata to another value"
       (are [expected x m] (= expected (meta (with-meta x m)))
         nil {} nil
         {:a 0} {} {:a 0}
